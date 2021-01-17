@@ -1,12 +1,12 @@
 // make sure we wait to attach handlers until the dom is fully loaded
 $(function() {
     // change devoured boolean
-    $("change-devoured").on("click", function(event) {
+    $(".change-devoured").on("click", function(event) {
         var id = $(this).data("id");
         var newDevoured = $(this).data("newdevoured");
     
         var newDevouredState = {
-            devoured: newDevouredState
+            devoured: newDevoured
         };
 
         // send put request

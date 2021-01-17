@@ -18,12 +18,12 @@ function objToSQL(obj) {
 
     // loop through the keys and push the key/value as an arr of strings
     for (var key in obj) {
-        var val = ob[key];
+        var val = obj[key];
 
         // check to skip hidden properties
         if (Object.hasOwnProperty.call(obj, key)) {
             // if it's a string with spaces, add quotes
-            if (typeof value === "string" && value.indexOf(" ") >= 0) {
+            if (typeof val === "string" && val.indexOf(" ") >= 0) {
                 val = "'" + val + "'";
             }
             arr.push(key + "=" + val);
