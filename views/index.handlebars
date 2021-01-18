@@ -1,40 +1,67 @@
-<h1>Burger Time!</h1>
-
-<h2>What burgers should we try?</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-            {{> burgers/burger-block devoured=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>The burgers that we've already tried...</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-            {{> burgers/burger-block devoured=false}}
-        {{/if}}
-    {{/each}}
-</ul>
-
-<h2>What other burgers should we eat?</h2>
-<form class="create-form">
-    
-    <div class="form-group">
-        <label for="burger">Burger Name:</label>
-        <input type="text" id="burger" name="name">
+<div class="container">
+    <header class="row mt-3">
+        <h1 class="col-12 text-center">It's Burger Time!</h1>
+    </header>
+    <div class="row justify-content-center my-3 d-flex align-items-top">
+        <div class="col-10 col-sm-7 col-md-5 col-lg-4 col-xl-3 mb-3">
+            <aside class="card">
+                <div class="card-header">
+                    What burger should we try?
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                                {{> burgers/burger-block devoured=true}}
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div> 
+            </aside>
+        </div>
+        <div class="col-10 col-sm-7 col-md-2 col-lg-4 col-xl-4 mb-3">
+            <img src="https://media.giphy.com/media/8naKDtvnycUNy/giphy.gif" class="img-fluid" alt="Good Burger">
+        </div>
+        <div class="col-10 col-sm-7 col-md-5 col-lg-4 col-xl-3">
+            <aside class="card">
+                <div class="card-header">
+                    The burgers that we've already tried:
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                {{> burgers/burger-block devoured=false}}
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div> 
+            </aside> 
+        </div>
     </div>
-
-    <div class="form-group">
-        <label for="devoured">Have you had it before?</label>
-        <br>
-        <input type="radio" name="devoured" value="1" checked>Devoured!
-        <br>
-        <input type="radio" name="devoured" value="0">Not yet!
+    <div class="row justify-content-center">
+        <div class="col-10 col-sm-9 col-md-7 col-lg-5 col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">What other burgers should we eat?</h5>
+                    <hr>
+                    <form class="create-form">
+                        <div class="form-group mb-3">
+                            <label for="burger" class="form-label">Burger Name:</label>
+                            <input type="text" class="form-control" id="burger" name="name">
+                        </div>
+                        <hr>
+                        <div class="form-check mb-3">
+                            <label class="form-check-label" for="devoured">Have you had it before?</label>
+                            <br>
+                            <input class="form-check-input" type="radio" name="devoured" value="1" checked>devoured!
+                            <br>
+                            <input class="form-check-input" type="radio" name="devoured" value="0">not yet!
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">Add Burger</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <button type="submit">Add Burger</button>
-</form>
+</div>
