@@ -1,3 +1,24 @@
+body {
+    background-color: yellow;
+}
+
+h1, h4 {
+    color: red;
+    font-family: 'Mrs Sheppards', cursive;
+}
+
 ul {
     list-style: none;
+}
+
+.list-group-item {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.card-header {
+    background: gold;
 }

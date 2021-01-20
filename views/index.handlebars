@@ -1,14 +1,13 @@
 <div class="container">
     <header class="row mt-3">
-        <h1 class="col-12 text-center">It's Burger Time!</h1>
+        <h1 class="col-12 text-center"><i class="fas fa-hamburger"></i> It's Burger Time! <i class="fas fa-hamburger"></i></h1>
+        <h4 class="col-12 text-center">Welcome to Good Burger, Home of the Good Burger</h4>
     </header>
     <div class="row justify-content-center my-3 d-flex align-items-top">
         <div class="col-10 col-sm-7 col-md-5 col-lg-4 col-xl-3 mb-3">
             <aside class="card">
-                <div class="card-header">
-                    What burger should we try?
-                </div>
                 <div class="card-body">
+                    <h5 class="card-title mb-3">Can I take your order?</h5>
                     <ul class="list-group list-group-flush">
                         {{#each burgers}}
                             {{#unless devoured}}
@@ -24,10 +23,8 @@
         </div>
         <div class="col-10 col-sm-7 col-md-5 col-lg-4 col-xl-3">
             <aside class="card">
-                <div class="card-header">
-                    The burgers that we've already tried:
-                </div>
                 <div class="card-body">
+                    <h5 class="card-title mb-3">Mmm!</h5>
                     <ul class="list-group list-group-flush">
                         {{#each burgers}}
                             {{#if devoured}}
@@ -42,21 +39,14 @@
     <div class="row justify-content-center">
         <div class="col-10 col-sm-9 col-md-7 col-lg-5 col-xl-4">
             <div class="card">
+                <div class="card-header">
+                    <b>What other burger should we try?</b>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title mb-3">What other burgers should we eat?</h5>
-                    <hr>
                     <form class="create-form">
                         <div class="form-group mb-3">
                             <label for="burger" class="form-label">Burger Name:</label>
                             <input type="text" class="form-control" id="burger" name="name">
-                        </div>
-                        <hr>
-                        <div class="form-check mb-3">
-                            <label class="form-check-label" for="devoured">Have you had it before?</label>
-                            <br>
-                            <input class="form-check-input" type="radio" name="devoured" value="1" checked>devoured!
-                            <br>
-                            <input class="form-check-input" type="radio" name="devoured" value="0">not yet!
                         </div>
                         <button type="submit" class="btn btn-primary btn-sm">Add Burger</button>
                     </form>
