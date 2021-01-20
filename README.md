@@ -1,7 +1,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/maphaiyarath/burger-bar)
 # Burger (Handle)Bar(s)
 
-![Burger Bar App](./TODO)
+![Burger Bar App](./public/assets/img/app.png)
 You can demo the app [here](https://maphaiyarath-burger-bar.herokuapp.com/).
 
 ## Table of Contents
